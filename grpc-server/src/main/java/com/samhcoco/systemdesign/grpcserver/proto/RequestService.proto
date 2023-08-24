@@ -1,0 +1,18 @@
+syntax = "proto3";
+option java_multiple_files = true;
+
+package com.samhcoco.systemdesign;
+
+message RequestMessage {
+  int64 id = 1;
+  string body = 2;
+}
+
+message ResponseMessage {
+  int32 code = 1;
+  string responseMessage = 2;
+}
+
+service RequestService {
+  rpc request(RequestMessage) returns (ResponseMessage);
+}

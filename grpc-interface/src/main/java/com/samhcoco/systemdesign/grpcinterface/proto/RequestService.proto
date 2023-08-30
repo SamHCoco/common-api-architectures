@@ -1,7 +1,7 @@
 syntax = "proto3";
 option java_multiple_files = true;
 
-package com.samhcoco.systemdesign;
+package com.samhcoco.systemdesign.grpcinterface.proto.generated;
 
 message RequestMessage {
   int64 id = 1;

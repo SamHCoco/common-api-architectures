@@ -6,6 +6,8 @@
     <modules>
         <module>grpc-server</module>
 		<module>grpc-client</module>
+		<module>grpc-interface</module>
+		<module>graphql</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -20,41 +22,65 @@
 	<description>A reference project for common API architectures.</description>
 	<properties>
 		<java.version>11</java.version>
+		<protobuf.version>3.17.3</protobuf.version>
+		<protobuf-plugin.version>0.6.1</protobuf-plugin.version>
+		<grpc.version>1.42.1</grpc.version>
 	</properties>
 	<dependencies>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
 		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-netty</artifactId>
-			<version>1.16.1</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-protobuf</artifactId>
-			<version>1.16.1</version>
-		</dependency>
-		<dependency>
-			<groupId>io.grpc</groupId>
-			<artifactId>grpc-stub</artifactId>
-			<version>1.16.1</version>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-graphql</artifactId>
 		</dependency>
 
 		<dependency>
-			<groupId>com.google.protobuf</groupId>
-			<artifactId>protobuf-java</artifactId>
-			<version>3.24.0</version>
+			<groupId>com.h2database</groupId>
+			<artifactId>h2</artifactId>
+			<scope>runtime</scope>
 		</dependency>
 
-		<dependency>
-			<groupId>org.xolstice.maven.plugins</groupId>
-			<artifactId>protobuf-maven-plugin</artifactId>
-			<version>0.6.1</version>
-		</dependency>
+<!--		<dependency>-->
+<!--			<groupId>io.grpc</groupId>-->
+<!--			<artifactId>grpc-netty</artifactId>-->
+<!--			<version>${grpc.version}</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.grpc</groupId>-->
+<!--			<artifactId>grpc-protobuf</artifactId>-->
+<!--			<version>${grpc.version}</version>-->
+<!--		</dependency>-->
+<!--		<dependency>-->
+<!--			<groupId>io.grpc</groupId>-->
+<!--			<artifactId>grpc-stub</artifactId>-->
+<!--			<version>${grpc.version}</version>-->
+<!--		</dependency>-->
 
+<!--		<dependency>-->
+<!--			&lt;!&ndash; Java 9+ compatibility - Do NOT update to 2.0.0 &ndash;&gt;-->
+<!--			<groupId>jakarta.annotation</groupId>-->
+<!--			<artifactId>jakarta.annotation-api</artifactId>-->
+<!--			<version>1.3.5</version>-->
+<!--			<optional>true</optional>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>com.google.protobuf</groupId>-->
+<!--			<artifactId>protobuf-java</artifactId>-->
+<!--			<version>3.24.0</version>-->
+<!--		</dependency>-->
+
+<!--		<dependency>-->
+<!--			<groupId>org.xolstice.maven.plugins</groupId>-->
+<!--			<artifactId>protobuf-maven-plugin</artifactId>-->
+<!--			<version>${protobuf-plugin.version}</version>-->
+<!--		</dependency>-->
 
 		<dependency>
 			<groupId>org.projectlombok</groupId>
@@ -64,6 +90,16 @@
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webflux</artifactId>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.graphql</groupId>
+			<artifactId>spring-graphql-test</artifactId>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>

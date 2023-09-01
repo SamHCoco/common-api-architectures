@@ -18,7 +18,7 @@
 	<groupId>com.samhcoco.systemdesign</groupId>
 	<artifactId>common-apis-architectures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>common-apis-architectures</name>
+	<name>common-api-architectures</name>
 	<description>A reference project for common API architectures.</description>
 	<properties>
 		<java.version>11</java.version>

@@ -1,8 +1,8 @@
 type Query {
-    users: [User]
+    userAccounts: [UserAccount]
 }
 
-type User {
+type UserAccount {
     id: ID!
     firstName: String
     lastName: String

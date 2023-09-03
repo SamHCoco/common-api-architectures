@@ -16,7 +16,7 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.samhcoco.systemdesign</groupId>
-	<artifactId>common-apis-architectures</artifactId>
+	<artifactId>common-api-architectures</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<name>common-api-architectures</name>
 	<description>A reference project for common API architectures.</description>

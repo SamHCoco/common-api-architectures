@@ -5,7 +5,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class GrpcServer {
 
     public static void main(String[] args) {
-        SpringApplication.run(GrpcServer.class);
+        SpringApplication.run(GrpcServer.class, args);
     }
 
 }

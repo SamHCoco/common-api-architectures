@@ -1,4 +1,4 @@
-package com.samhcoco.systemdesign.graphql.model;
+package com.samhcoco.systemdesign.core.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

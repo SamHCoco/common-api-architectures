@@ -8,6 +8,8 @@
 		<module>grpc-client</module>
 		<module>grpc-interface</module>
 		<module>graphql</module>
+		<module>soap-web-service</module>
+		<module>core</module>
 	</modules>
     <parent>
 		<groupId>org.springframework.boot</groupId>
@@ -118,6 +120,24 @@
 					</excludes>
 				</configuration>
 			</plugin>
+<!--			<plugin>-->
+<!--				<groupId>org.codehaus.mojo</groupId>-->
+<!--				<artifactId>jaxb2-maven-plugin</artifactId>-->
+<!--				<version>3.1.0</version>-->
+<!--				<executions>-->
+<!--					<execution>-->
+<!--						<id>xjc</id>-->
+<!--						<goals>-->
+<!--							<goal>xjc</goal>-->
+<!--						</goals>-->
+<!--					</execution>-->
+<!--				</executions>-->
+<!--				<configuration>-->
+<!--					<sources>-->
+<!--						<source>${project.basedir}/src/main/resources/users.xsd</source>-->
+<!--					</sources>-->
+<!--				</configuration>-->
+<!--			</plugin>-->
 		</plugins>
 	</build>
 

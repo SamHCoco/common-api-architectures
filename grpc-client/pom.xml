@@ -11,5 +11,13 @@
 
     <artifactId>grpc-client</artifactId>
 
+    <dependencies>
+        <dependency>
+            <groupId>com.samhcoco.systemdesign</groupId>
+            <artifactId>core</artifactId>
+            <version>0.0.1-SNAPSHOT</version>
+        </dependency>
+    </dependencies>
+
 
 </project>

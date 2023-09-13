@@ -1,0 +1,37 @@
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://localhost:9010/projects/soap-web-service"
+           targetNamespace="http://localhost:9010/projects/soap-web-service" elementFormDefault="qualified">
+
+    <!--    defines request message for the service-->
+    <xs:element name="getUserRequest">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="id" type="xs:int"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <!--    defines response message for the service-->
+    <xs:element name="getUserResponse">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="user" type="tns:user"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:complexType name="user">
+        <xs:sequence>
+            <xs:element name="id" type="xs:int"/>
+            <xs:element name="firstName" type="xs:string"/>
+            <xs:element name="lastName" type="xs:string"/>
+            <xs:element name="emailAddress" type="xs:string"/>
+        </xs:sequence>
+    </xs:complexType>
+
+<!--    <xs:simpleType name="userEnabled">-->
+<!--        <xs:restriction base="xs:boolean">-->
+<!--            <xs:enumeration value="TRUE"/>-->
+<!--            <xs:enumeration value="FALSE"/>-->
+<!--        </xs:restriction>-->
+<!--    </xs:simpleType>-->
+</xs:schema>
